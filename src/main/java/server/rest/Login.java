@@ -1,4 +1,4 @@
-package server.rest;
+package main.java.server.rest;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -8,14 +8,15 @@ import javax.servlet.ServletException;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 
-@Path(ResourcesPath.LOGIN)
+@Path("/login")
 public class Login {
   public Login() {}
 
   @GET
   @Produces(MediaType.TEXT_PLAIN)
   public String badGet() throws ServletException, IOException {
-    return "Unsupported";
+    System.out.println("#### Get ...");
+    return "Unsupported. Try post.";
   }
 
   @POST
