@@ -11,10 +11,10 @@ export class AuthenticationService {
 
   login(username: string, password: string) {
     return this.http
-      .post(
-        REST_API_URL_BASE + '/login',
-        JSON.stringify({username: username, password: password}),
-      )
+      .post(REST_API_URL_BASE + '/login', {
+        username: username,
+        password: password,
+      })
       .map((response: Response) => {
         // login successful if there's a jwt token in the response
         let user = response.json();
