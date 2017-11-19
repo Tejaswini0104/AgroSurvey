@@ -3,7 +3,7 @@ import {Http, Headers, Response} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-const REST_API_URL_BASE = 'http://0.0.0.0:8080';
+const REST_API_URL_BASE = 'http://localhost:8080';
 
 @Injectable()
 export class AuthenticationService {
